@@ -37,8 +37,7 @@ class _InvoicesScreenState extends State<InvoicesScreen> {
           return ListTile(
             title: Text('Invoice ${invoice.id}'),
             subtitle: Text('${invoice.customerName} - ${invoice.date.toString().split(' ')[0]}'),
-            trailing: Text('Total: 
-${invoice.total.toStringAsFixed(2)}'),
+            trailing: Text('Total: ' + '${invoice.total.toStringAsFixed(2)}'),
           );
         },
       ),

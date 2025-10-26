@@ -40,8 +40,7 @@ class _InventoryScreenState extends State<InventoryScreen> {
           final item = _inventory[index];
           return ListTile(
             title: Text(item.name),
-            subtitle: Text('${item.description} - Qty: ${item.quantity} - Price: 
-${item.price}'),
+            subtitle: Text('${item.description} - Qty: ${item.quantity} - Price: ' + '${item.price}'),
             trailing: Text('Total: ${(item.quantity * item.price).toStringAsFixed(2)}'),
           );
         },

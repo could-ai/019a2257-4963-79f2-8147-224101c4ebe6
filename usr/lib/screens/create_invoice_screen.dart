@@ -130,13 +130,11 @@ class _CreateInvoiceScreenState extends State<CreateInvoiceScreen> {
                   final item = entry.value;
                   return ListTile(
                     title: Text(item.itemName),
-                    subtitle: Text('Qty: ${item.quantity} - Price: 
-${item.price}'),
+                    subtitle: Text('Qty: ${item.quantity} - Price: ' + '${item.price}'),
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text('Total: 
-${item.total.toStringAsFixed(2)}'),
+                        Text('Total: ' + '${item.total.toStringAsFixed(2)}'),
                         IconButton(
                           icon: const Icon(Icons.remove),
                           onPressed: () => _removeItem(index),
@@ -147,8 +145,7 @@ ${item.total.toStringAsFixed(2)}'),
                 }),
                 const Divider(),
                 Text(
-                  'Invoice Total: 
-${_selectedItems.fold(0.0, (sum, item) => sum + item.total).toStringAsFixed(2)}',
+                  'Invoice Total: ' + '${_selectedItems.fold(0.0, (sum, item) => sum + item.total).toStringAsFixed(2)}',
                   style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                 ),
               ],
